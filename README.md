@@ -210,7 +210,25 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Instalar dependencias
+### 3. Crear carpetas de base de datos
+
+El proyecto requiere dos carpetas en la raíz donde se crearán automáticamente las bases de datos SQLite al iniciar la aplicación:
+
+```bash
+# Windows
+mkdir database_bar
+mkdir memory
+
+# Linux / macOS
+mkdir -p database_bar memory
+```
+
+- **`database_bar/`**: Aquí se creará `bar_database.db` con las tablas de cuentas, pedidos y facturas.
+- **`memory/`**: Aquí se creará `memory.db` usada por LangGraph para guardar el estado y checkpoints del grafo de agentes.
+
+> **Nota**: Las tablas se crean automáticamente al ejecutar la aplicación por primera vez. No necesitas crear los archivos `.db` manualmente, solo las carpetas.
+
+### 4. Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
