@@ -1,0 +1,64 @@
+{
+    "cervezas": [
+        {
+            "nombre": "Corona",
+            "precio": 10000
+        },
+        {
+            "nombre": "Club Colombia",
+            "precio": 7000
+        },
+        {
+            "nombre": "Poker",
+            "precio": 6000
+        },
+        {
+            "nombre": "Costeña",
+            "precio": 6000
+        },
+        {
+            "nombre": "Stella",
+            "precio": 12000
+        },
+        {
+            "nombre": "Aguila ligth",
+            "precio": 6000
+        },
+        {
+            "nombre": "Heineken",
+            "precio": 12000
+        }
+    ],
+    "cocteles": [
+        {
+            "nombre": "Mojito",
+            "precio": 18000
+        },
+        {
+            "nombre": "Margarita",
+            "precio": 20000
+        },
+        {
+            "nombre": "Orgasmo",
+            "precio": 20000
+        },
+        {
+            "nombre": "Pecera",
+            "precio": 50000
+        },
+        {
+            "nombre": "Martini",
+            "precio": 22000
+        }
+    ],
+    "comida": [
+        {
+            "nombre": "Hamburguesa",
+            "precio": 25000
+        },
+        {
+            "nombre": "Papas fritas",
+            "precio": 12000
+        }
+    ]
+}

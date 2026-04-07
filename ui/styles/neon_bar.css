@@ -1,0 +1,326 @@
+/* ============================================
+   BAR IA - NEON THEME
+   ============================================ */
+
+/* --- FUENTES Y FONDO GLOBAL --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+.stApp {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* --- TÍTULO PRINCIPAL CON GLOW NEÓN --- */
+h1 {
+    font-family: 'Orbitron', sans-serif !important;
+    color: #ff00ff !important;
+    text-shadow:
+        0 0 7px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 21px #ff00ff,
+        0 0 42px #ff00ff,
+        0 0 82px #ff00ff !important;
+    text-align: center !important;
+    letter-spacing: 2px !important;
+}
+
+/* --- CAJAS DE INFO --- */
+.stAlert {
+    background: rgba(255, 0, 255, 0.08) !important;
+    border: 1px solid #ff00ff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2) !important;
+}
+
+.stAlert>div {
+    color: #e0e0ff !important;
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+/* --- MENSAJES DEL CHAT --- */
+[data-testid="stChatMessage"] {
+    background: rgba(15, 15, 30, 0.85) !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Mensajes del usuario - borde neón cyan */
+[data-testid="stChatMessage"]:has([data-testid="ChatMessageAvatar"]):nth-child(odd) {
+    border-left: 3px solid #00ffff !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15), inset 0 0 30px rgba(0, 255, 255, 0.03) !important;
+}
+
+/* Mensajes del asistente - borde neón rosa */
+[data-testid="stChatMessage"]:has([data-testid="ChatMessageAvatar"]):nth-child(even) {
+    border-left: 3px solid #ff6ec7 !important;
+    box-shadow: 0 0 15px rgba(255, 110, 199, 0.15), inset 0 0 30px rgba(255, 110, 199, 0.03) !important;
+}
+
+[data-testid="stChatMessage"] p {
+    color: #e0e0ff !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+}
+
+/* --- INPUT DE CHAT --- */
+.stChatInput {
+    border: 2px solid #00ffff !important;
+    border-radius: 25px !important;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2) !important;
+    background: rgba(10, 10, 20, 0.9) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stChatInput:focus-within {
+    border-color: #ff00ff !important;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.4) !important;
+}
+
+.stChatInput textarea {
+    color: #e0e0ff !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 20px !important;
+}
+
+.stChatInput textarea::placeholder {
+    color: #8888aa !important;
+}
+
+/* --- SIDEBAR RESPONSIVO --- */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a0a2e 100%) !important;
+    border-right: 2px solid #bf00ff !important;
+    box-shadow: 5px 0 25px rgba(191, 0, 255, 0.3) !important;
+    min-width: 200px !important;
+}
+
+[data-testid="stSidebar"] h2 {
+    font-family: 'Orbitron', sans-serif !important;
+    color: #bf00ff !important;
+    text-shadow: 0 0 10px #bf00ff, 0 0 20px #bf00ff !important;
+    text-align: center !important;
+    font-size: 16px !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stAlert"] {
+    background: rgba(191, 0, 255, 0.1) !important;
+    border: 1px solid #bf00ff !important;
+    border-radius: 8px !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stAlert"]>div {
+    color: #d0b0ff !important;
+    font-size: 12px !important;
+    word-break: break-all !important;
+}
+
+/* --- FILA DE CONVERSACIÓN (flexbox responsivo) --- */
+[data-testid="stSidebar"] .stHorizontalBlock {
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 4px !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    margin: 2px 0 !important;
+    padding: 0 !important;
+}
+
+[data-testid="stSidebar"] .stHorizontalBlock > div:first-child {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+}
+
+[data-testid="stSidebar"] .stHorizontalBlock > div:last-child {
+    flex: 0 0 auto !important;
+    width: 36px !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+}
+
+/* --- BOTÓN DE CONVERSACIÓN --- */
+[data-testid="stSidebar"] .stHorizontalBlock > div:first-child button[kind="primary"],
+[data-testid="stSidebar"] .stHorizontalBlock > div:first-child button[kind="secondary"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 6px 8px !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+
+[data-testid="stSidebar"] .stHorizontalBlock > div:first-child button[kind="primary"] {
+    border: 2px solid #ff00ff !important;
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.3) !important;
+}
+
+[data-testid="stSidebar"] .stHorizontalBlock > div:first-child button[kind="secondary"] {
+    border: 1px solid rgba(191, 0, 255, 0.3) !important;
+    background: rgba(15, 15, 30, 0.5) !important;
+}
+
+/* --- BOTÓN MENÚ ⋮ --- */
+[data-testid="stSidebar"] .stHorizontalBlock > div:last-child button[kind="secondary"] {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+    padding: 6px 0 !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    border: 1px solid rgba(191, 0, 255, 0.3) !important;
+    background: rgba(15, 15, 30, 0.5) !important;
+}
+
+[data-testid="stSidebar"] .stHorizontalBlock > div:last-child button[kind="secondary"]:hover {
+    border-color: #ff00ff !important;
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.3) !important;
+}
+
+/* --- POPOVER MENÚ --- */
+[data-testid="stSidebar"] [data-testid="stPopoverBody"] {
+    background: rgba(15, 15, 30, 0.95) !important;
+    border: 1px solid #bf00ff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 15px rgba(191, 0, 255, 0.3) !important;
+    min-width: 180px !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stPopoverBody"] button[kind="secondary"] {
+    background: transparent !important;
+    border: none !important;
+    color: #d0d0e0 !important;
+    text-align: left !important;
+    padding: 8px 12px !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 14px !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stPopoverBody"] button[kind="secondary"]:hover {
+    background: rgba(191, 0, 255, 0.15) !important;
+    color: #ff00ff !important;
+}
+
+/* --- BOTÓN NUEVA CONVERSACIÓN --- */
+[data-testid="stSidebar"] button[kind="primary"]:not([data-testid]) {
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+}
+
+/* --- CAPTION --- */
+[data-testid="stSidebar"] [data-testid="stCaption"] {
+    font-size: 11px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+/* --- BOTÓN LIMPIAR CONVERSIÓN --- */
+[data-testid="stSidebar"] button[kind="secondary"]:not(.stHorizontalBlock button) {
+    background: transparent !important;
+    border: 2px solid #39ff14 !important;
+    color: #39ff14 !important;
+    border-radius: 25px !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2) !important;
+    text-shadow: 0 0 5px #39ff14 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+[data-testid="stSidebar"] button[kind="secondary"]:not(.stHorizontalBlock button):hover {
+    background: rgba(57, 255, 20, 0.15) !important;
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.5), inset 0 0 15px rgba(57, 255, 20, 0.1) !important;
+    transform: scale(1.02) !important;
+}
+
+/* --- SPINNER --- */
+.stSpinner>div {
+    border-top-color: #ff00ff !important;
+}
+
+[data-testid="stStatusWidget"] {
+    color: #00ffff !important;
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+/* --- ERROR --- */
+.stException {
+    background: rgba(255, 0, 0, 0.1) !important;
+    border: 1px solid #ff4444 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2) !important;
+}
+
+/* --- SCROLLBAR PERSONALIZADA --- */
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff00ff, #00ffff) !important;
+    border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff6ec7, #39ff14) !important;
+}
+
+/* --- HEADER DE LA APP --- */
+header {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff00ff, #00ffff, #ff00ff, transparent) !important;
+    box-shadow: 0 0 15px #ff00ff, 0 0 15px #00ffff !important;
+}
+
+/* --- TEXTO GENERAL --- */
+p,
+span,
+div {
+    color: #d0d0e0 !important;
+}
+
+/* --- FOOTER --- */
+footer {
+    visibility: hidden !important;
+}
+
+footer::after {
+    content: '🍺 BAR IA - Powered by Neon 🍺';
+    visibility: visible !important;
+    display: block !important;
+    text-align: center !important;
+    color: #ff00ff !important;
+    font-family: 'Orbitron', sans-serif !important;
+    text-shadow: 0 0 10px #ff00ff !important;
+    padding: 20px !important;
+}
